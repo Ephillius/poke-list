@@ -17,6 +17,10 @@ button {
 	color: #2c3e50;
 }
 
+#app > img {
+	width: 100%;
+}
+
 .randomizer {
 	padding: 20px 30px;
 	margin: 20px auto !important;
@@ -26,7 +30,8 @@ button {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	width: 400px;
+	width: 95%;
+	max-width: 400px;
 	margin: 0 auto !important;
 	box-shadow: 0 3px 20px rgba(0,0,0,0.5), 
 				0 8px 10px rgba(0,0,0,0.7);
