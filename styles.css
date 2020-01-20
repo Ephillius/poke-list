@@ -18,7 +18,8 @@ button {
 }
 
 #app > img {
-	width: 100%;
+	width: 95%;
+	max-width: 400px;
 }
 
 .randomizer {
