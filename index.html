@@ -7,12 +7,12 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P">
         <link rel="stylesheet" href="https://unpkg.com/nes.css@latest/css/nes.min.css">
         <link rel="stylesheet" href="./styles.css">
-        <title>Who's That Pokémon?</title>
+        <title>Who's that Pokémon?</title>
     </head>
     <body>
         <div id="app">
             <img alt="Pokémon" src="./assets/logo-pixel.gif" />
-             <button class="randomizer nes-container is-rounded" @click="pokemonInfo()">Randomize!</button>
+             <button type="button" class="randomizer nes-container is-rounded" @click="pokemonInfo()">Randomize!</button>
             <div class="pokemon-card nes-container is-rounded">
                 <img class="pokemon-avatar" :src="pokemonSprite" alt="">
                 <div class="pokemon-text nes-container is-rounded">
@@ -20,12 +20,12 @@
                     <p>HP: {{ hp }}</p>
                     <p>Type: {{ type1 }}{{ type2 }}</p>
                 </div>
-                <button v-if="!toggle" @click="toggle = !toggle" class="pokedex-button nes-container is-rounded">+</button>
-                <button v-else @click="toggle = !toggle" class="pokedex-button nes-container is-rounded">-</button>
+                <button type="button" aria-label="Read more" v-if="!toggle" @click="toggle = !toggle" class="pokedex-button nes-container is-rounded">+</button>
+                <button type="button" aria-label="Read less" v-else @click="toggle = !toggle" class="pokedex-button nes-container is-rounded">-</button>
                 <p v-show="toggle" class="pokedex-text nes-container is-rounded">{{ text }}</p>
             </div>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.7.13/dist/vue.js"></script>
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
         <script src="script.js"></script>
     </body>
